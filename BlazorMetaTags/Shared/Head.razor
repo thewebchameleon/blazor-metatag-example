@@ -1,0 +1,22 @@
+﻿@inject AppState _appState
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@_appState.MetaTags.Title</title>
+    <meta name="description" content="@_appState.MetaTags.Description">
+
+    <base href="~/" />
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
+    <link href="/css/site.css" rel="stylesheet" />
+</head>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        _appState.OnChange += StateHasChanged;
+    }
+
+}
