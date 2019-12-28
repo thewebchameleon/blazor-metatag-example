@@ -30,7 +30,6 @@ namespace BlazorMetaTags
             builder.CloseElement();
             builder.CloseElement();
 
-            base.BuildRenderTree(builder);
         }
 
     }

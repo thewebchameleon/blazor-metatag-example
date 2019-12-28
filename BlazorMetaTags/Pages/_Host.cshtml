@@ -6,4 +6,4 @@
 }
 
 <!DOCTYPE html>
-@(await Html.RenderComponentAsync<AppBase>(RenderMode.ServerPrerendered))
+<component type="typeof(AppBase)" render-mode="ServerPrerendered" />
